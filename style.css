@@ -10,3 +10,20 @@ body {
 em strong {
     color: red;
 }
+h1{
+    text-align: center;
+    background: #555555;
+}
+
+#mision{
+     font-size: 20 px; 
+     text-align: center;
+}
+p{
+    text-align: center;
+}
+
+#ban{	
+    width: 100%;
+    
+}
