@@ -10,7 +10,7 @@ body {
 em strong {
     color: red;
 }
-h1{
+h2{
     text-align: center;
     background: #555555;
 }
@@ -25,5 +25,39 @@ p{
 
 #ban{	
     width: 100%;
-    
+
+}
+
+.item{
+    font-style: italic;
+
+}
+
+.diferencial {
+background: #FFFFFF;
+padding: 30px;
+}
+
+.main {
+    font-size: 10px;
+    padding: 20px;
+}
+
+.img_difer {
+    width: 50%;
+}
+
+.ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.titulo-centro{
+    text-align: center;
+}
+
+.titulo-principal{
+    padding-left: 30px;
 }
