@@ -156,20 +156,39 @@ td,th{
 
 /*Aquí inicia el CSS para nuestra home*/
 
+
 .banner{
     width: 100%;
 }
+
+/*main > p{
+    background: red;
+} 
+
+img + p{
+    background: yellow;
+}
+
+
+img ~ p{
+    background: green ;
+}*/
 
 .titulo-principal{
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
     clear:left;
+    text-shadow: 2px 2px black;
 }
 
 .principal p{
     margin: 0 0 1em;
 }
+/*
+.principal p:not(#mision){
+    background: orange;
+}*/
 
 .principal strong{
     font-weight: bold;
@@ -196,6 +215,16 @@ td,th{
 
 .imagenDiferenciales{
     width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 15px #000000;
+
+}
+
+.imagenDiferenciales:hover{
+    opacity: 40%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px black;
+
 }
 
 .video{
@@ -203,3 +232,7 @@ td,th{
     margin: 1em auto;
 }
 
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
