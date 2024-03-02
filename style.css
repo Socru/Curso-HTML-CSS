@@ -236,3 +236,19 @@ img ~ p{
     padding: 3em 0;
     background: #888888;
 }
+
+@media screen and (max-width:480px) {
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static ;
+    }
+
+    .caja,.principal,.mapa,.diferenciales,.video{
+        width: auto;
+    }
+    .diferenciales,.imagenDiferenciales{
+        width: 100%;
+    }
+}
