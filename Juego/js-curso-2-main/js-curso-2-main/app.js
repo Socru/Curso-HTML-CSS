@@ -1,21 +1,67 @@
-let mensaje = document.querySelector('h1');
-mensaje.innerHTML = 'Hora del desafio';
-function consoleclick(){
-    alert('console cliqueado');
+
+let numeroSecreto=0;
+let intentos = 1;
+
+function verificarIntento() { 
+    let numUsuario = parseInt(document.getElementById("valorUsuario").value);
+    console.log(typeof (numUsuario));
+    console.log(numUsuario);
+    console.log(numeroSecreto);
+    console.log(numeroSecreto == numUsuario);
+    if (numUsuario == numeroSecreto){
+        asignarTextoelemento('p', `acertaste en ${intentos} ${intentos == 1 ? 'vez': 'veces'} ` );
+        document.getElementById('reiniciar').removeAttribute('disabled');
+    } else {
+        if (numeroSecreto > numeroSecreto) {
+            asignarTextoelemento('p','el numero es mayor');
+        } else { 
+            asignarTextoelemento('p',"el numero es menor");
+        }
+        
+        intentos++;
+        limpiarCaja(); 
+    }
+    return;
 }
 
-function mensajeprompt(){
-    let ciudad = prompt('Escribe una ciudad de brazil', 'Rio de Janeiro');
-    alert("estuve en "+ciudad+" y me acorde de ti");
-}
-function alertaclick(){
-    alert(" yo amo js");
+function asignarTextoelemento(elemento, texto){
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
 }
 
-function mensajeprompt(){
-    let num1, num2, num3;
-    num1 = prompt('Escribe un numero');
-    num2 = prompt('Escribe otro numero');
-    (num3) = (parseInt( num1) + parseInt( num1) );
-    alert("la suma es "+num3);
+function generarAleatorio() { 
+    let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+    return numeroSecreto;
 }
+
+function limpiarCaja(){
+    document.querySelector("#valorUsuario").value = "";
+}
+
+function generarNumeroSecreto() {
+    let numerogenerado = Math.floor(Math.random() * 10) + 1;
+    if (listaNumeroSorteado.includes(numerogenerado)) {
+        
+    } else {
+        listaNumeroSorteado.push(numerogenerado);
+        return numeroSecretoSecret;
+    }
+}
+
+function condicionesIniciales() { 
+    asignarTextoelemento("h1", "juego del num secreto");
+
+    asignarTextoelemento('p', 'ingresa un numero entre 1 y 100');
+    numeroSecreto = generarNumeroSecreto();
+    intentos = 1;
+}
+
+function reiniciarJuego() {
+    limpiarCaja();
+    condicionesIniciales(); 
+    documento.querySelector('#reiniciar').setAtribute('disabled', 'true');
+    
+}
+
+condicionesIniciales();
